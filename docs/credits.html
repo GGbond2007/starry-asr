@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>星空语音识别引擎 · 致谢名单</title>
+<title>致谢名单</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
@@ -19,7 +19,6 @@
     padding: 32px 18px 48px;
     overflow-x: hidden;
   }
-  /* 星空背景 */
   .stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
   .star { position: absolute; border-radius: 50%; background: #fff; animation: twinkle var(--d,3s) ease-in-out infinite alternate; opacity:.7; }
   @keyframes twinkle { from{opacity:.15} to{opacity:.85} }
@@ -45,47 +44,65 @@
     background: linear-gradient(90deg,#5b6cff,#a855f7);
   }
 
-  .card {
+  .section-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #9db2ff;
+    margin: 30px 0 20px;
+  }
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 50px; height: 2px;
+    margin: 10px auto 0;
+    background: linear-gradient(90deg, transparent, #5b6cff, transparent);
+  }
+
+  .name-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+  .name-card {
+    padding: 14px 28px;
     background: rgba(255,255,255,.055);
     border: 1px solid rgba(255,255,255,.09);
-    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-    border-radius: 20px; padding: 22px 20px; margin-bottom: 16px;
-    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-    animation: fadeUp .7s ease both;
+    border-radius: 16px;
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    font-size: 16.5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all .25s ease;
+    animation: fadeUp .6s ease both;
   }
-  .card:nth-child(1){animation-delay:.08s} .card:nth-child(2){animation-delay:.18s}
-  .card:nth-child(3){animation-delay:.28s} .card:nth-child(4){animation-delay:.38s}
-  .card:nth-child(5){animation-delay:.48s}
-  .card:active { transform: scale(.98); }
-  .card:hover { border-color: rgba(157,178,255,.35); box-shadow: 0 8px 34px rgba(91,108,255,.16); }
-  .card.special { border-color: rgba(168,85,247,.4); background: rgba(139,92,246,.09); }
-  .row { display:flex; align-items:center; gap:16px; }
-  .avatar {
-    flex-shrink: 0; width: 56px; height: 56px; border-radius: 17px;
-    display:flex; align-items:center; justify-content:center;
-    font-size: 27px; font-weight: 700; color:#fff;
-  }
-  .a1 { background: linear-gradient(135deg,#667eea,#764ba2); box-shadow:0 6px 20px rgba(102,126,234,.45);}
-  .a2 { background: linear-gradient(135deg,#f093fb,#f5576c); box-shadow:0 6px 20px rgba(245,87,108,.4);}
-  .a3 { background: linear-gradient(135deg,#43e97b,#38f9d7); box-shadow:0 6px 20px rgba(67,233,123,.35);}
-  .a4 { background: linear-gradient(135deg,#fa709a,#fee140); box-shadow:0 6px 20px rgba(250,112,154,.4);}
-  .info { flex: 1; min-width: 0; }
-  .name { font-size: 18.5px; font-weight: 700; letter-spacing: 1px; display:flex; align-items:center; gap:9px; flex-wrap:wrap;}
-  .badge {
-    font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 99px; letter-spacing: 1px;
-    background: linear-gradient(90deg,#a855f7,#6366f1); box-shadow: 0 2px 10px rgba(168,85,247,.4);
-  }
-  .badge.b2 { background: linear-gradient(90deg,#ec4899,#f97316); box-shadow:0 2px 10px rgba(236,72,153,.35);}
-  .badge.b3 { background: linear-gradient(90deg,#10b981,#06b6d4); box-shadow:0 2px 10px rgba(16,185,129,.35);}
-  .desc { margin-top: 7px; font-size: 13.5px; line-height: 1.75; color: #aab3dd; }
+  .name-card:nth-child(1){animation-delay:.08s}
+  .name-card:nth-child(2){animation-delay:.16s}
+  .name-card:nth-child(3){animation-delay:.24s}
+  .name-card:nth-child(4){animation-delay:.32s}
+  .name-card:active { transform: scale(.96); }
+  .name-card:hover { border-color: rgba(157,178,255,.35); box-shadow: 0 6px 26px rgba(91,108,255,.16); }
 
   .thanks-all {
-    text-align:center; padding: 24px 18px; animation-delay:.58s !important;
+    text-align: center;
+    padding: 24px 18px;
+    animation-delay: .42s !important;
   }
-  .thanks-all .emoji { font-size: 34px; }
-  .thanks-all p { margin-top: 10px; font-size: 14.5px; color:#aab3dd; line-height: 1.9; }
+  .thanks-all p { font-size: 14.5px; color: #aab3dd; line-height: 1.9; }
+  .thanks-all b { color: #c5cdf2; }
 
-  /* QQ群加入按钮 */
+  .sponsor-placeholder {
+    text-align: center;
+    padding: 30px 18px;
+    font-size: 13px;
+    color: #5d6899;
+    letter-spacing: 2px;
+    animation: fadeUp .7s ease both;
+    animation-delay: .52s !important;
+  }
+
   .join-btn {
     display:flex; align-items:center; justify-content:center; gap:11px;
     margin: 26px auto 0; max-width: 340px; padding: 16px 20px;
@@ -113,45 +130,25 @@
 <div class="wrap">
   <header>
     <div class="logo">✨</div>
-    <h1>星空语音识别引擎</h1>
-    <div class="subtitle">— 特 别 鸣 谢 —</div>
+    <h1>致谢名单</h1>
+    <div class="subtitle">— 特 别 致 谢 —</div>
     <div class="divider"></div>
   </header>
 
-  <section class="card special">
-    <div class="row">
-      <div class="avatar a1">星</div>
-      <div class="info">
-        <div class="name">星空之主 <span class="badge">前期 AI 主要提供者</span></div>
-        <div class="desc">项目起步阶段的核心 AI 支持者，为早期版本的开发提供了主要的技术贡献。</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="card">
-    <div class="row">
-      <div class="avatar a2">浅</div>
-      <div class="info">
-        <div class="name">浅念 <span class="badge b2">MSC 插件托管</span></div>
-        <div class="desc">提供 MSC 插件的托管服务与文件存储帮助，保障了识别插件的稳定分发。</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="card">
-    <div class="row">
-      <div class="avatar a3">梦</div>
-      <div class="info">
-        <div class="name">今梦 <span class="badge b3">无障碍引导</span></div>
-        <div class="desc">在无障碍功能的适配过程中提供宝贵的提示和引导，让视障用户也能顺畅使用。</div>
-      </div>
-    </div>
-  </section>
+  <div class="section-title">特别致谢</div>
+  <div class="name-grid">
+    <div class="name-card">星空之主</div>
+    <div class="name-card">浅念</div>
+    <div class="name-card">今梦</div>
+    <div class="name-card">阅读者</div>
+  </div>
 
   <section class="card thanks-all">
-    <div class="emoji">💙</div>
-    <p><b>以及群里的各位小伙伴们</b><br>感谢每一位测试反馈、提出建议、陪伴项目成长的朋友<br>你们的支持是星空前行的动力</p>
+    <p><b>以及群里的各位小伙伴们：</b><br>感谢每一位测试反馈、提出建议、陪伴项目成长的朋友<br>你们的支持是前行的动力</p>
   </section>
+
+  <div class="section-title">赞助名单</div>
+  <div class="sponsor-placeholder">虚位以待</div>
 
   <a class="join-btn" href="https://qun.qq.com/universal-share/share?ac=1&authKey=pp%2FRhCYpJzb5vtLHhHEuoTxTKEPMNkobM88cEJvzqiWpik8HdpHP1dojmM%2FNbQN0&busi_data=eyJncm91cENvZGUiOiI5ODA3MzAxNDYiLCJ0b2tlbiI6IitRODR6U3c4Rk9wYmJJSTZSY1F3YlBoMHRTZGY0RGlKWmxsNlcxNENRcTlwd1lRTkxMOFFqZFgwQUxmU2xnWXYiLCJ1aW4iOiIzMzg3MTc2MjcwIn0%3D&data=3S7nw32uSHLdGsCyTwP0pQsfrfQpBXLCoKkmUVBmnSv-x2Uz28MqXEkXT8eX_QQGPQSNyNiisAbSnya_0LuhMQ&svctype=4&tempid=h5_group_info">
     💬 加入交流群
@@ -159,12 +156,11 @@
   <div class="join-hint">点击加入 QQ 群 · 与开发者和其他用户一起交流</div>
 
   <footer>
-    星空语音识别引擎 · 致谢名单<br>
-    每一份贡献都值得被记住 ⭐
+    致谢名单<br>
+    每一份贡献都值得被记住
   </footer>
 </div>
 <script>
-  // 随机生成闪烁星星
   (function(){
     const box = document.getElementById('stars');
     for (let i = 0; i < 70; i++) {
