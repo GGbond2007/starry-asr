@@ -83,6 +83,19 @@
   .name-card:nth-child(3){animation-delay:.24s}
   .name-card:nth-child(4){animation-delay:.32s}
   .name-card:active { transform: scale(.96); }
+  .proj-card {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 15px 22px; margin: 0 auto 12px; max-width: 480px;
+    background: rgba(255,255,255,.055);
+    border: 1px solid rgba(255,255,255,.09);
+    border-radius: 16px; text-decoration: none; color: #e8eaf6;
+    transition: transform .2s ease, border-color .2s ease;
+  }
+  .proj-card:active { transform: scale(.97); }
+  .proj-card:hover { border-color: rgba(157,178,255,.4); }
+  .proj-name { font-size: 15.5px; font-weight: 600; letter-spacing: 1px; }
+  .proj-desc { font-size: 12px; color: #8b96c4; margin-top: 3px; }
+  .proj-arrow { font-size: 18px; color: #9db2ff; }
   .name-card:hover { border-color: rgba(157,178,255,.35); box-shadow: 0 6px 26px rgba(91,108,255,.16); }
 
   .thanks-all {
@@ -141,24 +154,31 @@
     <div class="name-card">浅念</div>
     <div class="name-card">今梦</div>
     <div class="name-card">阅读者</div>
-    <div class="name-card">🐈</div>
   </div>
+
+  <div class="section-title">开源项目</div>
+  <section class="card" style="padding: 20px 24px;">
+    <p style="text-align:center; font-size:14px; color:#aeb8dd; margin-bottom:18px;">本项目参考了以下开源项目</p>
+    <a class="proj-card" href="https://github.com/ggml-org/whisper.cpp">
+      <span><span class="proj-name">whisper.cpp</span><br><span class="proj-desc">OpenAI Whisper 模型的 C/C++ 高性能推理实现</span></span>
+      <span class="proj-arrow">→</span>
+    </a>
+    <a class="proj-card" href="https://github.com/k2-fsa/sherpa-ncnn">
+      <span><span class="proj-name">sherpa-ncnn</span><br><span class="proj-desc">k2-fsa 流式语音识别 NCNN 移动端推理框架</span></span>
+      <span class="proj-arrow">→</span>
+    </a>
+    <a class="proj-card" href="https://github.com/k2-fsa/sherpa-onnx">
+      <span><span class="proj-name">sherpa-onnx</span><br><span class="proj-desc">k2-fsa 语音识别 ONNX 推理框架（SenseVoice 离线识别）</span></span>
+      <span class="proj-arrow">→</span>
+    </a>
+  </section>
 
   <section class="card thanks-all">
     <p><b>以及群里的各位小伙伴们：</b><br>感谢每一位测试反馈、提出建议、陪伴项目成长的朋友<br>你们的支持是前行的动力</p>
   </section>
 
   <div class="section-title">赞助名单</div>
-  <div class="name-grid">
-    <div class="name-card">yán yè</div>
-    <div class="name-card">沙漠之鹰</div>
-    <div class="name-card">阅读者</div>
-    <div class="name-card">文刀宇阳</div>
-    <div class="name-card">繁星</div>
-    <div class="name-card">明月</div>
-    <div class="name-card">光芒万丈</div>
-    <div class="name-card">行色匆匆</div>
-  </div>
+  <div class="sponsor-placeholder">虚位以待</div>
 
   <a class="join-btn" href="https://qun.qq.com/universal-share/share?ac=1&authKey=pp%2FRhCYpJzb5vtLHhHEuoTxTKEPMNkobM88cEJvzqiWpik8HdpHP1dojmM%2FNbQN0&busi_data=eyJncm91cENvZGUiOiI5ODA3MzAxNDYiLCJ0b2tlbiI6IitRODR6U3c4Rk9wYmJJSTZSY1F3YlBoMHRTZGY0RGlKWmxsNlcxNENRcTlwd1lRTkxMOFFqZFgwQUxmU2xnWXYiLCJ1aW4iOiIzMzg3MTc2MjcwIn0%3D&data=3S7nw32uSHLdGsCyTwP0pQsfrfQpBXLCoKkmUVBmnSv-x2Uz28MqXEkXT8eX_QQGPQSNyNiisAbSnya_0LuhMQ&svctype=4&tempid=h5_group_info">
     💬 加入交流群
@@ -184,4 +204,3 @@
 </script>
 </body>
 </html>
-
