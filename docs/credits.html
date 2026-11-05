@@ -96,6 +96,15 @@
   .proj-name { font-size: 15.5px; font-weight: 600; letter-spacing: 1px; }
   .proj-desc { font-size: 12px; color: #8b96c4; margin-top: 3px; }
   .proj-arrow { font-size: 18px; color: #9db2ff; }
+  .lic-badge {
+    display: inline-block; margin-left: 8px; padding: 2px 10px;
+    font-size: 11px; font-weight: 600; letter-spacing: 1px;
+    border-radius: 99px; vertical-align: middle;
+  }
+  .badge-apache { background: rgba(64,186,255,.16); color: #7ee0ff; border: 1px solid rgba(64,186,255,.35); }
+  .badge-mit { background: rgba(126,224,143,.14); color: #8fe9a3; border: 1px solid rgba(126,224,143,.35); }
+  .badge-custom { background: rgba(224,195,252,.14); color: #e0c3fc; border: 1px solid rgba(224,195,252,.35); }
+  .lic-entry { margin-top: 22px; }
   .name-card:hover { border-color: rgba(157,178,255,.35); box-shadow: 0 6px 26px rgba(91,108,255,.16); }
 
   .thanks-all {
@@ -178,19 +187,40 @@
   <section class="card" style="padding: 20px 24px;">
     <p style="text-align:center; font-size:14px; color:#aeb8dd; margin-bottom:18px;">本项目参考了以下开源项目</p>
     <a class="proj-card" href="https://github.com/ggml-org/whisper.cpp">
-      <span><span class="proj-name">whisper.cpp</span><br><span class="proj-desc">OpenAI Whisper 模型的 C/C++ 高性能推理实现</span></span>
+      <span><span class="proj-name">whisper.cpp<span class="lic-badge badge-mit">MIT</span></span><br><span class="proj-desc">OpenAI Whisper 模型的 C/C++ 高性能推理实现</span></span>
       <span class="proj-arrow">→</span>
     </a>
     <a class="proj-card" href="https://github.com/k2-fsa/sherpa-ncnn">
-      <span><span class="proj-name">sherpa-ncnn</span><br><span class="proj-desc">k2-fsa 流式语音识别 NCNN 移动端推理框架</span></span>
+      <span><span class="proj-name">sherpa-ncnn<span class="lic-badge badge-apache">Apache-2.0</span></span><br><span class="proj-desc">k2-fsa 流式语音识别 NCNN 移动端推理框架</span></span>
       <span class="proj-arrow">→</span>
     </a>
     <a class="proj-card" href="https://github.com/k2-fsa/sherpa-onnx">
-      <span><span class="proj-name">sherpa-onnx</span><br><span class="proj-desc">k2-fsa 语音识别 ONNX 推理框架（SenseVoice 离线识别）</span></span>
+      <span><span class="proj-name">sherpa-onnx<span class="lic-badge badge-apache">Apache-2.0</span></span><br><span class="proj-desc">k2-fsa 语音识别 ONNX 推理框架（SenseVoice 离线识别）</span></span>
+      <span class="proj-arrow">→</span>
+    </a>
+    <a class="proj-card" href="https://github.com/FunAudioLLM/SenseVoice">
+      <span><span class="proj-name">SenseVoice<span class="lic-badge badge-custom">自定义协议</span></span><br><span class="proj-desc">阿里 FunAudioLLM 开源多语言语音识别模型（模型本体）</span></span>
+      <span class="proj-arrow">→</span>
+    </a>
+    <a class="proj-card" href="https://developer.android.com/jetpack/compose">
+      <span><span class="proj-name">Jetpack Compose / AndroidX<span class="lic-badge badge-apache">Apache-2.0</span></span><br><span class="proj-desc">应用全部界面基于 Compose 声明式 UI 构建</span></span>
+      <span class="proj-arrow">→</span>
+    </a>
+    <a class="proj-card" href="https://github.com/JetBrains/kotlin">
+      <span><span class="proj-name">Kotlin &amp; kotlinx-coroutines<span class="lic-badge badge-apache">Apache-2.0</span></span><br><span class="proj-desc">JetBrains Kotlin 语言与协程库</span></span>
+      <span class="proj-arrow">→</span>
+    </a>
+    <a class="proj-card" href="https://commons.apache.org/proper/commons-compress">
+      <span><span class="proj-name">Apache Commons Compress<span class="lic-badge badge-apache">Apache-2.0</span></span><br><span class="proj-desc">模型包 tar/bz2 解压</span></span>
       <span class="proj-arrow">→</span>
     </a>
   </section>
 
+  <div class="section-title lic-entry">开源许可证</div>
+  <a class="proj-card" href="rawfile:licenses.html">
+    <span><span class="proj-name">📜 开源许可证声明</span><br><span class="proj-desc">本应用使用的开源组件与 Apache-2.0 / MIT 协议全文</span></span>
+    <span class="proj-arrow">→</span>
+  </a>
   <a class="join-btn" href="https://qun.qq.com/universal-share/share?ac=1&authKey=pp%2FRhCYpJzb5vtLHhHEuoTxTKEPMNkobM88cEJvzqiWpik8HdpHP1dojmM%2FNbQN0&busi_data=eyJncm91cENvZGUiOiI5ODA3MzAxNDYiLCJ0b2tlbiI6IitRODR6U3c4Rk9wYmJJSTZSY1F3YlBoMHRTZGY0RGlKWmxsNlcxNENRcTlwd1lRTkxMOFFqZFgwQUxmU2xnWXYiLCJ1aW4iOiIzMzg3MTc2MjcwIn0%3D&data=3S7nw32uSHLdGsCyTwP0pQsfrfQpBXLCoKkmUVBmnSv-x2Uz28MqXEkXT8eX_QQGPQSNyNiisAbSnya_0LuhMQ&svctype=4&tempid=h5_group_info">
     💬 加入交流群
   </a>
